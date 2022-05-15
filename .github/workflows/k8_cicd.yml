@@ -58,7 +58,7 @@ jobs:
       - name: Checkout Target Repository
         uses: actions/checkout@v2
         with:
-          repository: DACHANCHOI/k8-cicd-argocd
+          repository: iamchoiz/k8-cicd-argocd
           path: deploy-k8s
 
       - name: Replace image tag in helm values (LOCAL)
@@ -82,9 +82,9 @@ jobs:
         run: |
           cd deploy-k8s
           git config --global user.email "dachan1207@gmail.com"
-          git config --global user.name "DACHANCHOI"
+          git config --global user.name "iamchoiz"
 
           git add demo/values.yaml demo/values-eks.yaml;
           git commit --message "Update demo image tag to $IMAGE_TAG";
           git config -l | grep 'http\..*\.extraheader' | cut -d= -f1 | xargs -L1 git config --unset-all
-          git push --prune https://token:$token@github.com/DACHANCHOI/k8-cicd-argocd.git
+          git push --prune https://token:$token@github.com/iamchoiz/k8-cicd-argocd.git
