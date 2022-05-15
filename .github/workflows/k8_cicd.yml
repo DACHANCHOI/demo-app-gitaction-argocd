@@ -82,7 +82,7 @@ jobs:
         run: |
           cd deploy-k8s
           git config --global user.email "dachan1207@gmail.com"
-          git config --global user.name "iamchoiz"
+          git config --global user.name "choizz"
 
           git add demo/values.yaml demo/values-eks.yaml;
           git commit --message "Update demo image tag to $IMAGE_TAG";
