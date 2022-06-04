@@ -1,4 +1,5 @@
-FROM httpd:2.4
-COPY index.html /usr/local/apache2/htdocs/
-COPY static /usr/local/apache2/htdocs/static
-EXPOSE 80
+FROM tomcat:latest
+CMD mkdir /usr/local/tomcat/webapps/test
+COPY index.html /usr/local/tomcat/webapps/test
+COPY static /usr/local/tomcat/webapps/test/static
+EXPOSE 8080
