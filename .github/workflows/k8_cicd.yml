@@ -27,5 +27,5 @@ jobs:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ap-northeast-2
-          role-to-assume: arn:aws:iam::468186750909:role/DeveloperRole
+          role-to-assume: arn:aws:iam::468186750909:role/AdministratorsRole
           role-duration-seconds: 900
